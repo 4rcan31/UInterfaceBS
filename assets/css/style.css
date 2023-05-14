@@ -1,7 +1,66 @@
 body {
-    background-color: #454545;
+  background-color: #333333;
+  height:100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  height: 100%;
+}
+
+.row {
+  height: 100%;
+}
+
+.celda {
+  margin-top: 10px;
+ 
+}
+
+
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+hr {
+    border-color: white;
   }
 
-  .bg-darkk {
-    background-color: #999999;
+
+  #sidebar {
+    height: 100%;
   }
+  
+   #sidebar nav {
+    height: 100%;
+  } 
+
+
+  
+
+
+  /* 
+    El valor del 16.67% se utiliza porque es la fracción equivalente a 1/6, y en este caso, estamos dividiendo la pantalla en seis columnas iguales.
+  */
+  .col-sm-10 {
+    margin-left: 16.80%;
+  }
+
+
+  .contenido {
+    background-color: #2c3e50;
+    height: 100%;
+  }
+  
+
+
+
+
+
+
+
+
+
