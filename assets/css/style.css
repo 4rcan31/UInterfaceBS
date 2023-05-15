@@ -1,66 +1,97 @@
+
+
+html {
+  height: 100%; /* Para que la caja padre tenga el 100% de alto de la pantalla y todas las cajas hijos de esta se adapten a toda la pantalla */
+}
 body {
-  background-color: #333333;
-  height:100%;
-  margin:0;
+  background-color: #2b2b2b; /* Color del fondo de toda la aplicacion */
+  height:100%; /* Para el alto se adapte a toda la pantalla */
   display: flex;
   flex-direction: column;
 }
 
-html {
-  height: 100%;
+
+/* Este es el codigo que se le da a cada espacio redondeado */
+.celda{
+  padding: 1rem !important; /* Para que tenga un espacio a todos los lados de 1rem */
+  background-color: #363636; /* Es el color de cada celda */
+  border-radius: 10px; /* Se redondean las esquinas */
+  overflow: auto; /* Como las celdas son estaticas, cuando haya bastante contenido este no se desborde, si no que aparezca un scroll cuando haya mas contenido del que la pantalla puede tener */
 }
 
-.row {
-  height: 100%;
+/* Se le da un alto del 100% a la unica fila para que las columnas ocupen el 100% de la pantalla */
+.row{
+  height: 100% ; /* Para que la fila tenga el 100% de alto de la pantalla */
 }
 
-.celda {
+
+
+/* Este codigo es para dar un espacio arriba y abajo*/
+.container-render {
+  height: 100%;
   margin-top: 10px;
- 
+  margin-bottom: 10px;
 }
 
 
-
+/* Este codigo es para cambiar de color cuando el puntero pase por alguna opcion del sidebar */
 .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px; /* La sombra se redondea */
+  background-color: #FFFFFF19; /* Se le pone un color mas claro que la celda */
 }
 
-hr {
-    border-color: white;
-  }
+/* Este codigo es para poner el hr en blanco por que el fondo es oscuro (negro) */
+hr{
+  border-color: white;
+}
 
 
-  #sidebar {
-    height: 100%;
-  }
-  
-   #sidebar nav {
-    height: 100%;
-  } 
+/* Este codigo es del sidebar para darle un alto del 100% de su caja padre (la celda) y tambien que tenga un pequeno espacio 
+con la celda que contiene el nombre de la app */
+.sidebar{
+  margin-top: 0.50rem !important; /* Para que haya un pequeno espacio para de la celda que esta arriba (por eso es margin-top o sea margen de arriba) */
+  height: 100%;
+}
+
+/* Estos estilos se le dan a la caja hija del sidebar (el nav) para que tenga un alto de 100 */
+.sidebar nav{
+  height: 100%;
+}
 
 
+
+/* Este codigo es del side bar y es para que el side bar se quede estatico, por eso la clase celda tiene al atributo  overflow: auto; */
+.col-sm-2{
+  position: fixed; 
+  height: 100%;
+}
   
 
 
   /* 
     El valor del 16.67% se utiliza porque es la fracción equivalente a 1/6, y en este caso, estamos dividiendo la pantalla en seis columnas iguales.
   */
-  .col-sm-10 {
-    margin-left: 16.80%;
-  }
+.col-sm-10 {
+  height: 100%;
+  margin-left: 16.80%;
+}
 
 
-  .contenido {
-    background-color: #2c3e50;
-    height: 100%;
-  }
+/* Para que ocupe el 100% de su caja padre (y asi en cadena hasta que ocupe el el alto 100% de toda la pantalla) */
+.render{
+  height: 100%; 
+}
   
 
+/* Como el tema es oscuro (escalas de grises) el texto tiene que ser claro (blanco) */
+h3, h5, a{
+  color: #fff !important;
+}
 
 
-
-
-
-
-
-
+/* El texto de los parrafos tiene que se blanco tambien por ser un tema oscuro */
+p{
+  color: white;
+  margin-top: 0.25rem !important; /* Para darle un espacio de arriba al parrafo de 0.25 rem */
+  margin-bottom: 0.25rem !important; /* Para dalr un espacio de abajo al parrafo de 0.25 rem */
+}
