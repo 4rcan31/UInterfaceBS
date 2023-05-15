@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="vendor/bootstrap-icons-1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title id="tittleHome">Login</title>
+  </head>
+  <body>
+    <!-- Inicio de todo, la caja padre -->
+    <div class="container-fluid container-render">
+      <!-- Inicio de la unica fila, la clase g-2 es para alterar el padding (el espacio de la caja hijo con la caja padre) -->
+      <div class="row g-2">
+        <!-- Inicio de la primera columna que contiene el side bar -->
+        <div class="col-sm-2">
+          <!-- Inicio de la primera celda con el nombre de la app y la ubicacion del usuario -->
+          <div class="celda">
+            <h3>Name App</h3>
+            <p>Login page</p>
+          </div>
+          <!-- Fin de la primera celda con el nombre de la app y la ubicacion del usuario -->
+
+          <!-- Inicio del sidebar y el menu -->
+          <div class="celda sidebar">
+            <nav class="nav flex-column">
+              <h5>Contenido</h5>
+              <hr />
+
+              <!-- Hipervinculos para redireccionar a otra parte de la web -->
+              <a class="nav-link active" href="index.html">
+                <!-- La etiqueta i con ese tipo de clase es para poner los iconos de la libreria de iconos de boostrap -->
+                <i class="bi bi-house-fill me-2"></i>Home
+              </a>
+              <a class="nav-link" href="login.html">
+                <i class="bi bi-person-fill me-2"></i>Login
+              </a>
+              <a class="nav-link" href="#">
+                <i class="bi bi-gear-fill me-2"></i>Configuracion
+              </a>
+              <h5 class="mt-4">Configuraciones</h5>
+              <hr />
+            </nav>
+          </div>
+          <!-- Fin del side bar y el menu -->
+        </div>
+        <!-- Fin de la primera columna -->
+
+        <!-- Inicio de la segunda columna de la fila, y es donde se renderiza el contenido  -->
+        <div class="col-sm-10">
+          <!-- Inicio de la celda para renderizar -->
+          <div class="celda render">
+            <h3 style="text-align: center; padding-top: 10rem;">Login</h3>
+
+            <form class="form-login" id="register">
+                  <b><label for="Emal">User</label></b>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="User"
+                    id="User"
+                    placeholder="Enter your username"
+                  /> <br>
+                  <b><label for="Emal">Pasword</label></b>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="Password"
+                      id="Password"
+                      placeholder="Enter your Password"
+                    /> 
+                  <label for="register">Si no tienen cuenta, <a href="register.html">registrate</a></label>
+                  <br><br>
+                <button
+                  type="submit"
+                  class="btn btn-secondary"
+                >
+                  Register
+                </button>
+            </form>
+
+
+
+          </div>
+          <!-- Fin de la celda para renderizar -->
+        </div>
+        <!-- Fin de la columna de contenido -->
+      </div>
+    </div>
+
+    <!-- Boostrap javascript -->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
