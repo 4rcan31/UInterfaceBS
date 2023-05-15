@@ -4,7 +4,7 @@ html {
   height: 100%; /* Para que la caja padre tenga el 100% de alto de la pantalla y todas las cajas hijos de esta se adapten a toda la pantalla */
 }
 body {
-  background-color: #2b2b2b; /* Color del fondo de toda la aplicacion */
+  background-color: #34495E; /* Color del fondo de toda la aplicacion */
   height:100%; /* Para el alto se adapte a toda la pantalla */
   display: flex;
   flex-direction: column;
@@ -14,10 +14,23 @@ body {
 /* Este es el codigo que se le da a cada espacio redondeado */
 .celda{
   padding: 1rem !important; /* Para que tenga un espacio a todos los lados de 1rem */
-  background-color: #363636; /* Es el color de cada celda */
+  background-color:#1C2833; /* Es el color de cada celda */
   border-radius: 10px; /* Se redondean las esquinas */
   overflow: auto; /* Como las celdas son estaticas, cuando haya bastante contenido este no se desborde, si no que aparezca un scroll cuando haya mas contenido del que la pantalla puede tener */
 }
+
+input[type="text"] {
+  background-color: #34495E;
+  border-color: #34495E ;
+}
+
+input[type="text"]::placeholder {
+  color: #AEB6BF;
+}
+
+
+
+
 
 /* Se le da un alto del 100% a la unica fila para que las columnas ocupen el 100% de la pantalla */
 .row{
@@ -84,7 +97,7 @@ con la celda que contiene el nombre de la app */
   
 
 /* Como el tema es oscuro (escalas de grises) el texto tiene que ser claro (blanco) */
-h3, h5, a{
+h3, h5, a, label{
   color: #fff !important;
 }
 
@@ -95,3 +108,57 @@ p{
   margin-top: 0.25rem !important; /* Para darle un espacio de arriba al parrafo de 0.25 rem */
   margin-bottom: 0.25rem !important; /* Para dalr un espacio de abajo al parrafo de 0.25 rem */
 }
+
+
+.form-login{
+  padding-top: 3rem;
+  padding-left: 35rem;
+  padding-right: 35rem;
+}
+
+
+
+/* Este codigo es para las imagenes */
+.img-container {
+  background-color: #AEB6BF;
+  margin-left: 1rem;
+  width: 400px; /* Ancho del contenedor */
+  height: 400px; /* Altura del contenedor */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+  position: relative; /* Permite posicionar el botón de zoom sobre la imagen */
+}
+
+.img-container img {
+  width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  height: 100%; /* Ajusta la imagen al alto del contenedor */
+  object-fit: cover; /* Recorta la imagen para ajustarla al contenedor */
+  transition: transform 0.3s ease-in-out; /* Efecto de transición suave */
+}
+
+.img-container:hover img {
+  transform: scale(1.1); /* Aplica un zoom del 10% */
+}
+
+.img-container:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Agrega un filtro oscuro */
+  z-index: 1;
+}
+
+.img-container:hover::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: #fff;
+  z-index: 2;
+}
+
+
